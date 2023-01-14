@@ -1,0 +1,17 @@
+{
+  "Name": "",
+  "Bot": {
+    "Token": "",
+    "Description": "",
+    "Activity": "",
+    "Status": 0
+  },
+  "Database": {
+    "Name": "",
+    "URI": ""
+  },
+  "Ids": {
+    "Guild": 123123123
+  },
+  "Save": false
+}
