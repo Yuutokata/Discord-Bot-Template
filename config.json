@@ -1,17 +1,29 @@
 {
-  "Name": "",
-  "Bot": {
-    "Token": "",
-    "Description": "",
-    "Activity": "",
-    "Status": 0
+  "name": "",
+  "bot": {
+    "token": "",
+    "description": "",
+    "activity": {
+      "status": false,
+      "text": ""
+    },
+    "status": 0
   },
-  "Database": {
-    "Name": "",
-    "URI": ""
+  "database": {
+    "name": "",
+    "uri": ""
   },
-  "Ids": {
-    "Guild": 123123123
+  "ids": {
+    "guild": 123123123
   },
-  "Save": false
+  "design": {
+    "color": "",
+    "footer": {
+      "icon_url": "",
+      "text": ""
+    },
+    "image": "",
+    "thumbnail": ""
+  },
+  "save": false
 }

@@ -3,6 +3,6 @@ from utils.config import Config
 
 config = Config()
 
-database = pymongo.MongoClient(config.uri)
+cluster = pymongo.MongoClient(config.uri)
 
-points = database[str(config.database)]
+database = cluster[str(config.database)]

@@ -6,16 +6,25 @@ class Config:
         config = open("./config.json", "r")
         config = json.load(config)
 
-        self.name = config["Name"]
+        self.name = config["name"]
 
-        self.token = config["Bot"]["Token"]
-        self.description = config["Bot"]["Description"]
-        self.activity = config["Bot"]["Activity"]
-        self.status = config["Bot"]["Status"]
+        self.token = config["bot"]["token"]
+        self.description = config["bot"]["description"]
 
-        self.database = config["Database"]["Name"]
-        self.uri = config["Database"]["URI"]
+        self.activity_status = config["bot"]["activity"]["status"]
+        self.activity_text = config["bot"]["activity"]["text"]
 
-        self.guild = config["Ids"]["Guild"]
+        self.status = config["bot"]["status"]
 
-        self.save = config["Save"]
+        self.database = config["database"]["name"]
+        self.uri = config["database"]["uri"]
+
+        self.guild = config["ids"]["guild"]
+
+        self.color = config["design"]["color"]
+        self.footer_text = config["design"]["footer"]
+        self.footer_icon = config["design"]["icon_url"]
+        self.image = config["design"]["image"]
+        self.thumbnail = config["design"]["thumbnail"]
+
+        self.save = config["save"]

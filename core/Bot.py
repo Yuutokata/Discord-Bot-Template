@@ -26,13 +26,15 @@ class Bot(commands.Bot):
         await self.wait_until_ready()
         await self.presence()
         if not self.synced:
+            self.logger.debug("Syncing Tree ...")
             await self.tree.sync(guild=discord.Object(id=int(self.config.guild)))
             self.synced = True
         self.logger.debug("The Bot has started")
 
     async def presence(self):
         status = self.status()
-        await self.change_presence(activity=discord.Game(name=self.config.activity, status=status))
+        if self.config.activity_status:
+            await self.change_presence(activity=discord.Game(name=self.config.activity_text, status=status))
 
     def status(self):
         if int(self.config.status) == 0:
